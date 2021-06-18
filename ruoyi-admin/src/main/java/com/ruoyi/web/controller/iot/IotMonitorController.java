@@ -26,7 +26,7 @@ public class IotMonitorController {
     @PostMapping("/save")
     @ApiOperation(value = "新增活动", notes = "新增活动", httpMethod = "POST")
     public R<Boolean> saveByCode(@RequestBody IotMonitor iotMonitor) {
-        return R.ok(monitorService.insertByCode(iotMonitor));
+        return R.ok(monitorService.save(iotMonitor));
     }
 
     @PostMapping("/update")
@@ -35,14 +35,14 @@ public class IotMonitorController {
         return R.ok(monitorService.updateById(iotMonitor));
     }
 
-    @GetMapping("select")
+    @GetMapping("/select")
     @ApiOperation(value = "通过主键查询单条活动", notes = "通过主键查询单条活动", httpMethod = "GET")
-    public R<IotMonitor> selectOne(@RequestParam(name = "id") String code) {
-        return R.ok(monitorService.getById(code));
+    public R<IotMonitor> selectOne(@RequestParam String iotCode) {
+        return R.ok(monitorService.getById(iotCode));
     }
 
     @GetMapping("/page")
-    @ApiOperation(value = "活动列表分页", notes = "活动列表分页")
+    @ApiOperation(value = "物联网监控列表分页", notes = "物联网监控列表分页", httpMethod = "GET")
     public R<IPage<IotMonitor>> getIotMonitorPage(Page page, IotMonitor iotMonitor) {
         return R.ok(monitorService.getIotMonitorPage(page, iotMonitor));
     }

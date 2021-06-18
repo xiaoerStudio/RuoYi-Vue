@@ -14,7 +14,12 @@ import com.ruoyi.iot.domain.IotMonitor;
  */
 public interface IotMonitorService extends IService<IotMonitor> {
 
-    Boolean insertByCode(IotMonitor iotMonitor);
-
+    /**
+     * 物联网监控列表分页
+     *
+     * @param page       分页参数
+     * @param iotMonitor 查询参数
+     * @return IPage<IotMonitor>
+     */
     IPage<IotMonitor> getIotMonitorPage(Page page, IotMonitor iotMonitor);
 }

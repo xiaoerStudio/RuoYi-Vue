@@ -35,112 +35,112 @@ public class IotMonitor extends Model<IotMonitor> implements Serializable {
     /**
      * 温度预警
      */
-    private String temperatureAlarm;
+    private Boolean temperatureAlarm;
 
     /**
      * 盐度报警
      */
-    private String salinityAlarm;
+    private Boolean salinityAlarm;
 
     /**
      * 浊度报警
      */
-    private String turbidityAlarm;
+    private Boolean turbidityAlarm;
 
     /**
      * ph报警
      */
-    private String phAlarm;
+    private Boolean phAlarm;
 
     /**
      * 氧化还原电位报警
      */
-    private String orpAlarm;
+    private Boolean orpAlarm;
 
     /**
      * 溶解氧报警
      */
-    private String oxygenAlarm;
+    private Boolean oxygenAlarm;
 
     /**
      * 氯化物报警
      */
-    private String chlorideAlarm;
+    private Boolean chlorideAlarm;
 
     /**
      * 摄像头是否开启
      */
-    private String cameraOn;
+    private Boolean cameraOn;
 
     /**
      * 温度上限
      */
-    private Boolean temperatureUpper;
+    private Integer temperatureUpper;
 
     /**
      * 温度下限
      */
-    private Boolean temperatureLower;
+    private Integer temperatureLower;
 
     /**
      * 盐度上限
      */
-    private Boolean salinityUpper;
+    private Integer salinityUpper;
 
     /**
      * 盐度下限
      */
-    private Boolean salinityLower;
+    private Integer salinityLower;
 
     /**
      * 浊度上限
      */
-    private Boolean turbidityUpper;
+    private Integer turbidityUpper;
 
     /**
      * 浊度下限
      */
-    private Boolean turbidityLower;
+    private Integer turbidityLower;
 
     /**
      * ph上限
      */
-    private Boolean phUpper;
+    private Integer phUpper;
 
     /**
      * ph下限
      */
-    private Boolean phLower;
+    private Integer phLower;
 
     /**
      * 氧化还原电位上限
      */
-    private Boolean orpUpper;
+    private Integer orpUpper;
 
     /**
      * 氧化还原电位下限
      */
-    private Boolean orpLower;
+    private Integer orpLower;
 
     /**
      * 溶解氧上限
      */
-    private Boolean oxygenUpper;
+    private Integer oxygenUpper;
 
     /**
      * 溶解氧下限
      */
-    private Boolean oxygenLower;
+    private Integer oxygenLower;
 
     /**
      * 氯化物上限
      */
-    private Boolean chlorideUpper;
+    private Integer chlorideUpper;
 
     /**
      * 氯化物下限
      */
-    private Boolean chlorideLower;
+    private Integer chlorideLower;
 
     /**
      * 摄像头缓存地址
