@@ -3,6 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.ruoyi.iot.mapper.IotMonitorMapper">
+
     <resultMap id="IotMonitorResult" type="com.ruoyi.iot.domain.IotMonitor">
         <id column="iot_code" property="iotCode"/>
         <result column="iot_name" property="iotName"/>

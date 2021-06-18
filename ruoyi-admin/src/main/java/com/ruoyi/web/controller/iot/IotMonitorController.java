@@ -35,10 +35,10 @@ public class IotMonitorController {
         return R.ok(monitorService.updateById(iotMonitor));
     }
 
-    @GetMapping("select")
+    @GetMapping("/select")
     @ApiOperation(value = "通过主键查询单条活动", notes = "通过主键查询单条活动", httpMethod = "GET")
-    public R<IotMonitor> selectOne(@RequestParam(name = "id") String code) {
-        return R.ok(monitorService.getById(code));
+    public R<IotMonitor> selectOne(@RequestParam String iotCode) {
+        return R.ok(monitorService.getById(iotCode));
     }
 
     @GetMapping("/page")
