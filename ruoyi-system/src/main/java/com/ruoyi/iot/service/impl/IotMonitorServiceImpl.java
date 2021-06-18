@@ -17,15 +17,11 @@ import org.springframework.stereotype.Service;
  * @date : 2021/6/17
  */
 @Service
-public class IotMonitorServiceImpl extends ServiceImpl<IotMonitorMapper, IotMonitor> implements IotMonitorService {
+public class IotMonitorServiceImpl extends ServiceImpl<IotMonitorMapper,IotMonitor> implements IotMonitorService {
 
-    @Override
-    public Boolean insertByCode(IotMonitor iotMonitor) {
-        return SqlHelper.retBool(baseMapper.insert(iotMonitor));
-    }
 
     @Override
     public IPage<IotMonitor> getIotMonitorPage(Page page, IotMonitor iotMonitor) {
-        return null;
+        return baseMapper.getIotMonitorPage(page,iotMonitor);
     }
 }

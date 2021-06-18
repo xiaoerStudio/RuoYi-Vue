@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.iot.mapper.IotMonitorMapper">
+    <resultMap id="IotMonitorResult" type="com.ruoyi.iot.domain.IotMonitor">
+        <id column="iot_code" property="iotCode"/>
+        <result column="iot_name" property="iotName"/>
+        <result column="temperature_alarm" property="temperatureAlarm"/>
+        <result column="temperature_upper" property="temperatureUpper"/>
+        <result column="temperature_lower" property="temperatureLower"/>
+        <result column="salinity_alarm" property="salinityAlarm"/>
+        <result column="salinity_upper" property="salinityUpper"/>
+        <result column="salinity_lower" property="salinityLower"/>
+        <result column="turbidity_alarm" property="turbidityAlarm"/>
+        <result column="turbidity_upper" property="turbidityUpper"/>
+        <result column="turbidity_lower" property="turbidityLower"/>
+        <result column="ph_alarm" property="phAlarm"/>
+        <result column="ph_upper" property="phUpper"/>
+        <result column="ph_lower" property="phLower"/>
+        <result column="orp_alarm" property="orpAlarm"/>
+        <result column="orp_upper" property="orpUpper"/>
+        <result column="orp_lower" property="orpLower"/>
+        <result column="oxygen_alarm" property="oxygenAlarm"/>
+        <result column="oxygen_upper" property="oxygenUpper"/>
+        <result column="oxygen_lower" property="oxygenLower"/>
+        <result column="chloride_alarm" property="chlorideAlarm"/>
+        <result column="chloride_upper" property="chlorideUpper"/>
+        <result column="chloride_lower" property="chlorideLower"/>
+        <result column="camera_on" property="cameraOn"/>
+        <result column="camera_addr" property="cameraAddr"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+    </resultMap>
+
+    <sql id="pageSelect">
+        iot_code,iot_name,temperature_alarm,salinity_alarm,turbidity_alarm,ph_alarm,orp_alarm,oxygen_alarm,chloride_alarm,
+        camera_on,temperature_upper,temperature_lower,salinity_upper,salinity_lower,turbidity_upper,turbidity_lower,ph_upper,
+        ph_lower,orp_upper,orp_lower,oxygen_upper,oxygen_lower,chloride_upper,chloride_lower,camera_addr,create_time,update_time
+    </sql>
+
+    <!-- 物联网监控列表分页 -->
+    <select id="getIotMonitorPage" resultMap="IotMonitorResult">
+        SELECT
+        <include refid="pageSelect"/>
+        FROM
+            iot_monitor
+    </select>
+</mapper> 
